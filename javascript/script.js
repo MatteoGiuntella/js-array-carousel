@@ -22,3 +22,134 @@
 // 4- creare un ciclo con un template literal che concatena il tutto
 
 // 5- costruire lo stesso risultato dell'html ma usando js 
+
+const myImg1 = document.createElement ('img')
+myImg1.classList.add('w-100', 'd-block')
+myImg1.src = "img/01.webp"
+
+const myImg2 = document.createElement ('img')
+myImg2.classList.add('w-100','d-none')
+myImg2.src = "img/02.webp"
+
+const myImg3 = document.createElement ('img')
+myImg3.classList.add('w-100','d-none')
+myImg3.src = "img/03.webp"
+
+const myImg4 = document.createElement ('img')
+myImg4.classList.add('w-100','d-none')
+myImg4.src = "img/04.webp"
+
+const myImg5 = document.createElement ('img')
+myImg5.classList.add('w-100','d-none')
+myImg5.src = "img/05.webp"
+
+
+const imgList = [
+    myImg1,
+    myImg2,
+    myImg3,
+    myImg4,
+    myImg5,
+]
+
+console.log(imgList)
+
+const album = document.getElementById('album')
+
+
+for ( let i = 0; i < imgList.length; i++ ){
+    
+    album.append(imgList[i]);
+
+}
+
+let next = document.getElementById('next')
+let previous = document.getElementById('previous')
+
+let counter = 0
+
+document.querySelector('button.next').addEventListener('click', function(){
+
+    counter ++
+
+    if( counter == imgList.length -1){
+
+
+    }
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const album = document.getElementById('album');
+
+// let currentSlideIndex = 0 // Range di valori 0 .. imgList.length-1
+
+// for (let i = 0; i < imgList.length; i++) {
+//     const imgHTML = imgList[i];
+
+//     if(i === currentSlideIndex) {
+//         visualizza = 'd-block'
+//     }
+
+//     album.innerHTML += `
+//         <div class="picture d-none">
+//             ${imgHTML}
+//         </div>
+//     `
+    
+// }
+
+// document.querySelector('button.next').addEventListener('click', function() {
+//     currentSlideIndex++;
+
+//     if(currentSlideIndex >= imgList.length) {
+//         currentSlideIndex = 0;
+//     }
+
+//     const slides = document.querySelectorAll('.picture');
+    
+//     for (let i = 0; i < slides.length; i++) {
+//         slides[i].classList.remove('d-none');
+//     }
+
+//     slides[currentSlideIndex].classList.add('d-block')
+// })
+
+// document.querySelector('button.previous').addEventListener('click', function() {
+//     currentSlideIndex--;
+
+//     if( currentSlideIndex < 0) {
+//         currentSlideIndex = imgList.length - 1;
+//     }
+
+//     const slides = document.querySelectorAll('.picture');
+    
+//     for (let i = 0; i < slides.length; i++) {
+//         slides[i].classList.remove('d-none');
+//     }
+
+//     slides[currentSlideIndex].classList.add('d-block')
+// })
