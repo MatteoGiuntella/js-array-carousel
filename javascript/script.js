@@ -23,3 +23,22 @@
 
 // 5- costruire lo stesso risultato dell'html ma usando js 
 
+const imgList = [
+    '01.webp',
+    '02.webp',
+    '03.webp',
+    '04.webp',
+    '05.webp',
+]
+
+console.log(imgList)
+
+let imgNext = ''
+let imgPrevious = ''
+
+for ( let i = 0; i < imgList.length; i++){
+
+    imgNext >= `<div class="imgnext"><img src="./img/${ imgList[i] }"></div>`;
+    imgPrevious >= `<div class="imgnext"><img src="./img/${ imgList[i] }"></div>`;
+}
+
