@@ -33,12 +33,17 @@ const imgList = [
 
 console.log(imgList)
 
-let imgNext = ''
-let imgPrevious = ''
+let folderImg = '';
 
-for ( let i = 0; i < imgList.length; i++){
+for (let i = 0; i < imgList.length; i++){
 
-    imgNext >= `<div class="imgnext"><img src="./img/${ imgList[i] }"></div>`;
-    imgPrevious >= `<div class="imgnext"><img src="./img/${ imgList[i] }"></div>`;
-}
+    folderImg += `<div id="album-container" class="album"><img src="./img/${ imgList[i] }"></div>`;
+};
+
+let slide = document.querySelector('#album').innerHTML = folderImg;
+
+let next = document.getElementById('next');
+let previous = document.getElementById('previous');
+
+
 
