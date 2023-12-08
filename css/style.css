@@ -11,3 +11,6 @@ img{
 .album{
 display: none;
 }
+.visual{
+    display: block;
+}

@@ -41,9 +41,35 @@ for (let i = 0; i < imgList.length; i++){
 };
 
 let slide = document.querySelector('#album').innerHTML = folderImg;
-
 let next = document.getElementById('next');
 let previous = document.getElementById('previous');
+
+let carousel = document.getElementsByClassName("album");
+
+let counter = 0;
+carousel[counter].classList.add('visual'); 
+
+next.addEventListener("click", function(){
+
+    if ( counter < imgList.length -1 ){
+
+        carousel[counter].classList.remove('visual');
+        counter ++;
+        carousel[counter].classList.add('visual');
+
+    }
+})
+previous.addEventListener("click", function(){
+
+    if ( counter != 0){
+
+        carousel[counter].classList.remove('visual');
+        counter --;
+        carousel[counter].classList.add('visual');
+
+    }
+})
+
 
 
 
