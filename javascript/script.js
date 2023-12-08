@@ -29,25 +29,43 @@ const imgList = [
     '03.webp',
     '04.webp',
     '05.webp',
-]
+]   
+
+// creo una array con dentro le img
 
 console.log(imgList)
 
 let folderImg = '';
+
+// creo una costante senza valore 
 
 for (let i = 0; i < imgList.length; i++){
 
     folderImg += `<div id="album-container" class="album"><img src="./img/${ imgList[i] }"></div>`;
 };
 
+// la mia costante senza valore la ficco in un ciclo dove assegno e add come valore un elemnto html
+
 let slide = document.querySelector('#album').innerHTML = folderImg;
+
+// creo un variante con assegnazione della variante contente elemnto html e a stampo nel id album
+
 let next = document.getElementById('next');
 let previous = document.getElementById('previous');
 
+// creo due varianti per i bottoni che mi faranno scorrere le img nel carosello
+
 let carousel = document.getElementsByClassName("album");
 
+//  ho creato una variante con assegnazione della classe con display-none
+
 let counter = 0;
+
+//  creato un contatore con valore zero che mi servirà per slidare le foto nel carosello
+
 carousel[counter].classList.add('visual'); 
+
+// aggiungo alla variante carousel [ con il valore di counter] la classe block
 
 next.addEventListener("click", function(){
 
@@ -65,6 +83,9 @@ next.addEventListener("click", function(){
     }
     carousel[counter].classList.add('visual');
 })
+
+// ho creato un loop infinito con il bottone next e previous in modo tale che lo slider non si fermerà all'ultima img ma ricomincerà da capo
+
 previous.addEventListener("click", function(){
     carousel[counter].classList.remove('visual');
 
