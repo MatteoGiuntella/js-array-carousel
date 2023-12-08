@@ -51,23 +51,30 @@ carousel[counter].classList.add('visual');
 
 next.addEventListener("click", function(){
 
+    carousel[counter].classList.remove('visual');
+
     if ( counter < imgList.length -1 ){
 
-        carousel[counter].classList.remove('visual');
-        counter ++;
-        carousel[counter].classList.add('visual');
+    counter ++;
 
     }
+    else{
+
+    counter = 0;
+
+    }
+    carousel[counter].classList.add('visual');
 })
 previous.addEventListener("click", function(){
+    carousel[counter].classList.remove('visual');
 
     if ( counter != 0){
-
-        carousel[counter].classList.remove('visual');
         counter --;
-        carousel[counter].classList.add('visual');
-
     }
+    else{
+        counter = imgList.length-1;
+    }
+    carousel[counter].classList.add('visual');
 })
 
 
