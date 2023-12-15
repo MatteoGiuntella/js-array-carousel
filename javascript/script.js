@@ -69,19 +69,19 @@ carousel[counter].classList.add('visual');
 
 next.addEventListener("click", function(){
 
-    carousel[counter].classList.remove('visual');
+    // carousel[counter].classList.remove('visual');
 
-    if ( counter < imgList.length -1 ){
+    // if ( counter < imgList.length -1 ){
 
-    counter ++;
+    // counter ++;
 
-    }
-    else{
+    // }
+    // else{
 
-    counter = 0;
+    // counter = 0;
 
-    }
-    carousel[counter].classList.add('visual');
+    // }
+    // carousel[counter].classList.add('visual');
 })
 
 // ho creato un loop infinito con il bottone next e previous in modo tale che lo slider non si fermerà all'ultima img ma ricomincerà da capo
@@ -98,6 +98,24 @@ previous.addEventListener("click", function(){
     carousel[counter].classList.add('visual');
 })
 
+
+setInterval(myRetard, 3000);
+
+function myRetard(){
+    carousel[counter].classList.remove('visual');
+
+    if ( counter < imgList.length -1 ){
+
+    counter ++;
+
+    }
+    else{
+
+    counter = 0;
+
+    }
+    carousel[counter].classList.add('visual');
+}
 
 
 
